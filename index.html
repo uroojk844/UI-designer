@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UI Designer</title>
+  <link rel="stylesheet" href="w3.css" />
+  <link rel="stylesheet" href="mycss.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div class="w3-bar">
+    <div id="mySidebar1" class="w3-sidebar w3-collapse w3-container w3-teal" style="width:250px;">
+      <div class="w3-center w3-block w3-xlarge" style="height: 7.9vh;vertical-align: middle;line-height: 7.9vh;"> <i
+          class="fas fa-tools"></i> &nbsp;Tools</div>
+      <div class="w3-display-topright w3-xlarge w3-hide-large"
+        style="height: 7.9vh;vertical-align: middle;line-height: 7.9vh;padding-right: 10px;" onclick="w3_close()"><i
+          class="fa fa-times"></i></div>
+    </div>
+
+    <div class="w3-main" style="margin-left:250px">
+      <div class="w3-display-topright w3-xlarge w3-hide-large w3-teal"
+        style="height: 7.9vh;vertical-align: middle;line-height: 7.9vh;padding-right: 10px" onclick="w3_open()"><i
+          class="fa fa-bars"></i></div>
+      <div class="w3-xlarge w3-center w3-teal w3-block"
+        style="height: 7.9vh;vertical-align: middle;line-height: 7.9vh;"> <i class="fas fa-laptop-code"></i>
+        &nbsp;Result</div>
+    </div>
+  </div>
+
+  <div class="w3-sidebar w3-collapse w3-container" style="width:250px;background: wheat;height: 92.1vh;" id="mySidebar">
+
+    <div class="label w3-margin-top">Tag Name</div>
+
+    <input type="text" id="tag" class="w3-input">
+    <br />
+
+    <div class="label">Value</div>
+
+    <textarea rows="1" cols="20" id="nodevalue" class="w3-input" style="resize: none;"></textarea>
+
+    <button id="create" class="w3-button w3-teal w3-margin-top
+        " onclick="create('result')&w3_close()">
+      Create
+    </button>
+
+    <button id="addBtn" class="w3-button w3-teal w3-margin-top">
+      Deselect
+    </button>
+    <br><br>
+    <div class="label w3-margin-top">Width</div>
+    <input type="text" class="w3-input" id="width">
+
+    <div class="label w3-margin-top">Height</div>
+    <input type="text" class="w3-input" id="height"><br>
+
+    <h3>W3CSS</h3>
+    <div id="w3class">
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo6')">Button &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo6" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-button</div>
+        <div class="w3-button w3-teal w3-small">w3-btn</div>
+        <div class="w3-button w3-teal w3-small">w3-circle</div>
+        <div class="w3-button w3-teal w3-small">w3-block</div>
+        <div class="w3-button w3-teal w3-small w3-wide">w3-wide</div>
+        <div class="w3-button w3-teal w3-small w3-ripple">w3-ripple</div>
+        <div class="w3-button w3-teal w3-small">w3-round</div>
+        <div class="w3-button w3-teal w3-small">w3-round-large</div>
+        <div class="w3-button w3-teal w3-small">w3-round-xlarge</div>
+        <div class="w3-button w3-teal w3-small">w3-round-xxlarge</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo7')">Font-size &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo7" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-tiny</div>
+        <div class="w3-button w3-teal w3-small">w3-small</div>
+        <div class="w3-button w3-teal w3-small">w3-medium</div>
+        <div class="w3-button w3-teal w3-small">w3-large</div>
+        <div class="w3-button w3-teal w3-small">w3-xlarge</div>
+        <div class="w3-button w3-teal w3-small">w3-xxlarge</div>
+        <div class="w3-button w3-teal w3-small">w3-xxxlarge</div>
+        <div class="w3-button w3-teal w3-small">w3-jumbo</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo2')">Background-color &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo2" class="w3-hide">
+        <div class="w3-button w3-small w3-black">w3-black</div>
+        <div class="w3-button w3-small w3-blue">w3-blue</div>
+        <div class="w3-button w3-small w3-gray">w3-gray</div>
+        <div class="w3-button w3-small w3-pink">w3-pink</div>
+        <div class="w3-button w3-small w3-green">w3-green</div>
+        <div class="w3-button w3-small w3-red">w3-red</div>
+        <div class="w3-button w3-small w3-teal">w3-teal</div>
+        <div class="w3-button w3-small w3-white">w3-white</div>
+        <div class="w3-button w3-small w3-dark-gray">w3-dark-gray</div>
+        <div class="w3-button w3-small w3-lime">w3-lime</div>
+        <div class="w3-button w3-small w3-khaki">w3-khaki</div>
+        <div class="w3-button w3-small w3-cyan">w3-cyan</div>
+        <div class="w3-button w3-small w3-sand">w3-sand</div>
+        <div class="w3-button w3-small w3-orange">w3-orange</div>
+        <div class="w3-button w3-small w3-deep-orange">w3-deep-orange</div>
+        <div class="w3-button w3-small w3-purple">w3-purple</div>
+        <div class="w3-button w3-small w3-deep-purple">w3-deep-purple</div>
+        <div class="w3-button w3-small w3-indigo">w3-indigo</div>
+        <div class="w3-button w3-small w3-amber">w3-amber</div>
+        <div class="w3-button w3-small w3-yellow">w3-yellow</div>
+        <div class="w3-button w3-small w3-transparent">w3-transparent</div>
+        <div class="w3-button w3-small w3-pale-blue">w3-pale-blue</div>
+        <div class="w3-button w3-small w3-pale-green">w3-pale-green</div>
+        <div class="w3-button w3-small w3-pale-yellow">w3-pale-yellow</div>
+        <div class="w3-button w3-small w3-pale-red">w3-pale-red</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo5')">Text-color &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo5" class="w3-hide">
+        <div class="w3-button w3-white w3-small w3-text-black">w3-text-black</div>
+        <div class="w3-button w3-white w3-small w3-text-blue">w3-text-blue</div>
+        <div class="w3-button w3-white w3-small w3-text-gray">w3-text-gray</div>
+        <div class="w3-button w3-white w3-small w3-text-pink">w3-text-pink</div>
+        <div class="w3-button w3-white w3-small w3-text-green">w3-text-green</div>
+        <div class="w3-button w3-white w3-small w3-text-red">w3-text-red</div>
+        <div class="w3-button w3-white w3-small w3-text-teal">w3-text-teal</div>
+        <div class="w3-button w3-white w3-small w3-text-white">w3-text-white</div>
+        <div class="w3-button w3-white w3-small w3-text-dark-gray">w3-text-dark-gray</div>
+        <div class="w3-button w3-white w3-small w3-text-lime">w3-text-lime</div>
+        <div class="w3-button w3-white w3-small w3-text-khaki">w3-text-khaki</div>
+        <div class="w3-button w3-white w3-small w3-text-cyan">w3-text-cyan</div>
+        <div class="w3-button w3-white w3-small w3-text-sand">w3-text-sand</div>
+        <div class="w3-button w3-white w3-small w3-text-orange">w3-text-orange</div>
+        <div class="w3-button w3-white w3-small w3-text-deep-orange">w3-text-deep-orange</div>
+        <div class="w3-button w3-white w3-small w3-text-purple">w3-text-purple</div>
+        <div class="w3-button w3-white w3-small w3-text-deep-orange">w3-text-deep-orange</div>
+        <div class="w3-button w3-white w3-small w3-text-indigo">w3-text-indigo</div>
+        <div class="w3-button w3-white w3-small w3-text-amber">w3-text-amber</div>
+        <div class="w3-button w3-white w3-small w3-text-yellow">w3-text-yellow</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo1')">Hover-background-color &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo1" class="w3-hide">
+        <div class="w3-button w3-teal w3-small w3-hover-black">w3-hover-black</div>
+        <div class="w3-button w3-teal w3-small w3-hover-blue">w3-hover-blue</div>
+        <div class="w3-button w3-teal w3-small w3-hover-gray">w3-hover-gray</div>
+        <div class="w3-button w3-teal w3-small w3-hover-pink">w3-hover-pink</div>
+        <div class="w3-button w3-teal w3-small w3-hover-green">w3-hover-green</div>
+        <div class="w3-button w3-teal w3-small w3-hover-red">w3-hover-red</div>
+        <div class="w3-button w3-teal w3-small w3-hover-teal">w3-hover-teal</div>
+        <div class="w3-button w3-teal w3-small w3-hover-white">w3-hover-white</div>
+        <div class="w3-button w3-teal w3-small w3-hover-dark-gray">w3-hover-dark-gray</div>
+        <div class="w3-button w3-teal w3-small w3-hover-lime">w3-hover-lime</div>
+        <div class="w3-button w3-teal w3-small w3-hover-khaki">w3-hover-khaki</div>
+        <div class="w3-button w3-teal w3-small w3-hover-cyan">w3-hover-cyan</div>
+        <div class="w3-button w3-teal w3-small w3-hover-sand">w3-hover-sand</div>
+        <div class="w3-button w3-teal w3-small w3-hover-orange">w3-hover-orange</div>
+        <div class="w3-button w3-teal w3-small w3-hover-deep-orange">w3-hover-deep-orange</div>
+        <div class="w3-button w3-teal w3-small w3-hover-purple">w3-hover-purple</div>
+        <div class="w3-button w3-teal w3-small w3-hover-deep-orange">w3-hover-deep-orange</div>
+        <div class="w3-button w3-teal w3-small w3-hover-indigo">w3-hover-indigo</div>
+        <div class="w3-button w3-teal w3-small w3-hover-amber">w3-hover-amber</div>
+        <div class="w3-button w3-teal w3-small w3-hover-yellow">w3-hover-yellow</div>
+        <div class="w3-button w3-teal w3-small w3-hover-transparent">w3-hover-transparent</div>
+        <div class="w3-button w3-teal w3-small w3-hover-pale-blue">w3-hover-pale-blue</div>
+        <div class="w3-button w3-teal w3-small w3-hover-pale-green">w3-hover-pale-green</div>
+        <div class="w3-button w3-teal w3-small w3-hover-pale-yellow">w3-hover-pale-yellow</div>
+        <div class="w3-button w3-teal w3-small w3-hover-pale-red">w3-hover-pale-red</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo3')">Border &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo3" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-border-0</div>
+        <div class="w3-button w3-teal w3-small">w3-border</div>
+        <div class="w3-button w3-teal w3-small">w3-border-bottom</div>
+        <div class="w3-button w3-teal w3-small">w3-border-top</div>
+        <div class="w3-button w3-teal w3-small">w3-border-left</div>
+        <div class="w3-button w3-teal w3-small">w3-border-right</div>
+        <div class="w3-button w3-teal w3-small">w3-bottombar</div>
+        <div class="w3-button w3-teal w3-small">w3-topbar</div>
+        <div class="w3-button w3-teal w3-small">w3-leftbar</div>
+        <div class="w3-button w3-teal w3-small">w3-rightbar</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo9')">Border-color &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo9" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-border-black</div>
+        <div class="w3-button w3-teal w3-small">w3-border-blue</div>
+        <div class="w3-button w3-teal w3-small">w3-border-gray</div>
+        <div class="w3-button w3-teal w3-small">w3-border-pink</div>
+        <div class="w3-button w3-teal w3-small">w3-border-green</div>
+        <div class="w3-button w3-teal w3-small">w3-border-red</div>
+        <div class="w3-button w3-teal w3-small">w3-border-teal</div>
+        <div class="w3-button w3-teal w3-small">w3-border-white</div>
+        <div class="w3-button w3-teal w3-small">w3-border-dark-gray</div>
+        <div class="w3-button w3-teal w3-small">w3-border-lime</div>
+        <div class="w3-button w3-teal w3-small">w3-border-khaki</div>
+        <div class="w3-button w3-teal w3-small">w3-border-cyan</div>
+        <div class="w3-button w3-teal w3-small">w3-border-sand</div>
+        <div class="w3-button w3-teal w3-small">w3-border-orange</div>
+        <div class="w3-button w3-teal w3-small">w3-border-deep-orange</div>
+        <div class="w3-button w3-teal w3-small">w3-border-purple</div>
+        <div class="w3-button w3-teal w3-small">w3-border-deep-orange</div>
+        <div class="w3-button w3-teal w3-small">w3-border-indigo</div>
+        <div class="w3-button w3-teal w3-small">w3-border-amber</div>
+        <div class="w3-button w3-teal w3-small">w3-border-yellow</div>
+        <div class="w3-button w3-teal w3-small">w3-border-transparent</div>
+        <div class="w3-button w3-teal w3-small">w3-border-pale-blue</div>
+        <div class="w3-button w3-teal w3-small">w3-border-pale-green</div>
+        <div class="w3-button w3-teal w3-small">w3-border-pale-yellow</div>
+        <div class="w3-button w3-teal w3-small">w3-border-pale-red</div>
+      </div>
+
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo8')">Hover-border-color &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo8" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-hover-border-black</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-blue</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-gray</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-pink</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-green</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-hover-red</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-teal</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-white</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-dark-gray</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-lime</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-khaki</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-cyan</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-sand</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-orange</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-deep-orange</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-purple</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-deep-orange</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-indigo</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-amber</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-yellow</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-transparent</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-pale-blue</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-pale-green</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-pale-yellow</div>
+        <div class="w3-button w3-teal w3-small">w3-hover-border-pale-red</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo4')">Padding &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo4" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-padding</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-16</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-24</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-32</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-48</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-64</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-small</div>
+        <div class="w3-button w3-teal w3-small">w3-padding-large</div>
+        <div class="w3-button L3-teal w3-small" title="Add right & left 16px padding">w3-container</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo10')">Margin &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo10" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Add 16px top and bottom margin">w3-section</div>
+        <div class="w3-button w3-teal w3-small" title="Add 16px margin each side">w3-margin</div>
+        <div class="w3-button w3-teal w3-small">w3-margin-bottom</div>
+        <div class="w3-button w3-teal w3-small">w3-margin-top</div>
+        <div class="w3-button w3-teal w3-small">w3-margin-left</div>
+        <div class="w3-button w3-teal w3-small">w3-margin-right</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo11')">Alignment &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo11" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Align text to right side">w3-right-align</div>
+        <div class="w3-button w3-teal w3-small" title="Align text to left side">w3-left-align</div>
+        <div class="w3-button w3-teal w3-small" title="Floats an element to the right (float: right)">w3-right</div>
+        <div class="w3-button w3-teal w3-small" title="Floats an element to the left (float: left)">w3-left</div>
+        <div class="w3-button w3-teal w3-small" title="Center container's element or text">w3-center</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo12')">Display-container &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo12" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="w3-display-container class">w3-display-container</div>
+        <div class="w3-button w3-teal w3-small"
+          title="Displays content at the top left corner of the w3-display-container">w3-display-topleft</div>
+        <div class="w3-button w3-teal w3-small">w3-display-topright</div>
+        <div class="w3-button w3-teal w3-small">w3-display-topmiddle</div>
+        <div class="w3-button w3-teal w3-small">w3-display-left</div>
+        <div class="w3-button w3-teal w3-small">w3-display-right</div>
+        <div class="w3-button w3-teal w3-small">w3-display-middle</div>
+        <div class="w3-button w3-teal w3-small">w3-display-bottomleft</div>
+        <div class="w3-button w3-teal w3-small">w3-display-bottomright</div>
+        <div class="w3-button w3-teal w3-small">w3-display-bottommiddle</div>
+        <div class="w3-button w3-teal w3-small" title="Shows an element (display: block)
+        ">w3-show</div>
+        <div class="w3-button w3-teal w3-small" title="Hide an element (display: none)
+        ">w3-hide</div>
+        <div class="w3-button w3-teal w3-small" title="Displays content on hover inside the w3-display-container">
+          w3-display-hover</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo13')">Shadow/Card &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo13" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-shadow</div>
+        <div class="w3-button w3-teal w3-small">w3-card</div>
+        <div class="w3-button w3-teal w3-small">w3-card-2</div>
+        <div class="w3-button w3-teal w3-small">w3-card-4</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo14')">Dropdown menu &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo14" class="w3-hide">
+        <div class="w3-button w3-teal w3-small">w3-dropdown-hover</div>
+        <div class="w3-button w3-teal w3-small">w3-dropdown-content</div>
+        <div class="w3-button w3-teal w3-small" title="It will work only when function is added">w3-dropdown-click</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo15')">Bar &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo15" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Horizontal bar">w3-bar</div>
+        <div class="w3-button w3-teal w3-small" title="Bar items">w3-bar-item</div>
+        <div class="w3-button w3-teal w3-small" title="Vertical bar">w3-bar-block</div>
+        <div class="w3-button w3-teal w3-small" title="Vertical sidebar">w3-sidebar</div>
+        <div class="w3-button w3-teal w3-small" title="For main section of page">w3-main</div>
+        <div class="w3-button w3-teal w3-small" title="For fully automatic responsive side navigation">w3-collapse</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo17')">Layout &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo17" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Column layout">w3-cell</div>
+        <div class="w3-button w3-teal w3-small" title="Columns">w3-cell-row</div>
+        <div class="w3-button w3-teal w3-small" title="Align at the top of cell">w3-cell-top</div>
+        <div class="w3-button w3-teal w3-small" title="Align at the middle of cell">w3-cell-middle</div>
+        <div class="w3-button w3-teal w3-small" title="Align at the bottom of cell">w3-cell-bottom</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo18')">Responsive &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo18" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Row layout">w3-row</div>
+        <div class="w3-button w3-teal w3-small" title="Row layout with 8px right & left padding">w3-row-padding</div>
+        <div class="w3-button w3-teal w3-small" title="Occupies 1/2 of width">w3-half</div>
+        <div class="w3-button w3-teal w3-small" title="Occupies 1/3 of width">w3-third</div>
+        <div class="w3-button w3-teal w3-small" title="Occupies 2/3 of width">w3-twothird</div>
+        <div class="w3-button w3-teal w3-small" title="Occupies 1/4 of width">w3-quarter</div>
+        <div class="w3-button w3-teal w3-small" title="Occupies 3/4 of width">w3-threequarter</div>
+        <div class="w3-button w3-teal w3-small" title="Occupies rest of column width">w3-rest</div>
+        <div class="w3-button w3-teal w3-small" title="Defines one column in a 12-column responsive grid">w3-col</div>
+        <div class="w3-button w3-teal w3-small" title="Display with 100% widthon mobile">w3-mobile</div>
+        <div class="w3-button w3-teal w3-small" title="Container for fixed size centerd content">w3-content</div>
+        <div class="w3-button w3-teal w3-small" title="Hide content on small screen(smaller then 601px)">w3-hide-small
+        </div>
+        <div class="w3-button w3-teal w3-small" title="Hide content on medium screen">w3-hide-medium</div>
+        <div class="w3-button w3-teal w3-small" title="Hide content on large screen(larger then 992px)">w3-hide-large
+        </div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo19')">Animation &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo19" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Slides in an element from the top">w3-animate-top</div>
+        <div class="w3-button w3-teal w3-small" title="Slides in an element from the right">w3-animate-right</div>
+        <div class="w3-button w3-teal w3-small" title="Slides in an element from the bottom">w3-animate-bottom</div>
+        <div class="w3-button w3-teal w3-small" title="Slides in an element from the left">w3-animate-left</div>
+        <div class="w3-button w3-teal w3-small" title="Animate opcity from 0 to 1 in 1.5sec">w3-animate-opacity</div>
+        <div class="w3-button w3-teal w3-small" title="Animate size from 0 to 100%">w3-animate-zoom</div>
+        <div class="w3-button w3-teal w3-small" title="Animate opacity from 0 to 1 and 1 to 0 infinite">
+          w3-animate-fading</div>
+        <div class="w3-button w3-teal w3-small" title="Rotate an element 360 degrees">w3-animate-spin</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo20')">Effect &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo20" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Add 0.6 opacity to element">w3-opacity</div>
+        <div class="w3-button w3-teal w3-small" title="Add 0.75 opacity to element">w3-opacity-min</div>
+        <div class="w3-button w3-teal w3-small" title="Add 0.25 opacity to element">w3-opacity-max</div>
+        <div class="w3-button w3-teal w3-small" title="Add 75% grascale effect to element">w3-grayscale</div>
+        <div class="w3-button w3-teal w3-small" title="Add 50% grascale effect to element">w3-grayscale-min</div>
+        <div class="w3-button w3-teal w3-small" title="Add 100% grascale effect to element">w3-grayscale-max</div>
+        <div class="w3-button w3-teal w3-small" title="Add 75% sepia effect to element">w3-sepia</div>
+        <div class="w3-button w3-teal w3-small" title="Add 50% sepia effect to element">w3-sepia-min</div>
+        <div class="w3-button w3-teal w3-small" title="Add 100% sepia effect to element">w3-sepia-max</div>
+        <div class="w3-button w3-teal w3-small" title="Add 75% grascale effect to element">w3-grayscale</div>
+        <div class="w3-button w3-teal w3-small" title="Add 50% grascale effect to element">w3-grayscale-min</div>
+        <div class="w3-button w3-teal w3-small" title="Add 0.6 opacity to an element on hover">w3-hover-opacity</div>
+        <div class="w3-button w3-teal w3-small" title="Add grayscale effect to an element on hover">w3-hover-grayscale
+        </div>
+        <div class="w3-button w3-teal w3-small" title="Add sepia effect to an element on hover">w3-hover-sepia</div>
+      </div>
+
+      <div class="w3-col s11 w3-padding w3-hover-teal w3-border-bottom w3-margin-bottom w3-margin-top"
+        onclick="myFunction('Demo16')">Extras &nbsp;<i class="fa fa-caret-down"></i></div>
+      <div id="Demo16" class="w3-hide">
+        <div class="w3-button w3-teal w3-small" title="Stylish list">w3-ul</div>
+        <div class="w3-button w3-teal w3-small" title="Stylish input">w3-input</div>
+        <div class="w3-button w3-teal w3-small" title="Label or sign">w3-tag</div>
+        <div class="w3-button w3-teal w3-small" title="Circular black badge">w3-badge</div>
+        <div class="w3-button w3-teal w3-small" title="Fit image in the conatiner">w3-image</div>
+      </div>
+
+      <hr class="w3-col s11 w3-border-bottom w3-border-teal">
+
+    </div>
+
+    <div class="w3-bar w3-margin-bottom">
+      <div onclick="previewCode()" class="w3-button w3-teal w3-right"><i class="fas fa-desktop"></i> &nbsp;Preview</div>
+      <div onclick="editCode()" class="w3-button w3-teal w3-left"><i class="fas fa-pencil-alt"></i> &nbsp;Edit</div>
+    </div>
+
+    <hr class="w3-border-bottom w3-border-teal">
+
+    <!--form/ file-->
+    <form action="result.php" method="post">
+      <textarea id="final1" name="final" class="w3-hide"></textarea>
+      <div id="download" class="w3-left w3-button w3-teal w3-margin-bottom"> <i class="fas fa-save"></i> &nbsp;Save
+      </div>
+      <a id="downloadBtn" class="w3-right w3-button w3-teal w3-margin-bottom" download> <i class="fas fa-download"></i>
+        &nbsp;Download</a>
+      <input type="submit" id="submit" class="w3-hide">
+    </form>
+
+  </div>
+
+  <div class="w3-main" style="margin-left:250px">
+    <div id="result" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+  </div>
+
+  <div id="advance" class="w3-card w3-white">
+    <ul>
+      <li id="del" title="Delete">
+        <i class="fas fa-trash-alt"></i>
+      </li>
+      <li id="edit" title="CSS">
+        <i class="fab fa-css3-alt"></i>
+      </li>
+      <li id="properties" title="Properties">
+        <i class="fas fa-info-circle"></i>
+      </li>
+      <li id="attributes" title="Attribute or JavaScript function">
+        <i class="fas fa-code"></i>
+      </li>
+    </ul>
+  </div>
+
+  <div id="model" class="w3-card w3-display-middle w3-mobile" style="width:300px">
+    <div class="w3-padding w3-center w3-teal"><i class="fas fa-code"></i> Attribute and JavaScript</div>
+    <div class="w3-padding" style="background-color: wheat;max-height:260px;overflow-y:auto">
+      <div class="label">Attribute</div>
+      <input type="text" id="attrib" class="w3-input">
+      <div class="label">Value</div>
+      <input type="text" id="val" class="w3-input">
+      <button class="w3-btn w3-teal w3-margin-top" id="modify">Submit</button>
+      <div class="w3-button w3-teal w3-display-topright"
+        onclick="document.getElementById('model').style.display = 'none';">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="propContainer" class="w3-card w3-display-middle w3-mobile" style="width: 300px;">
+    <div class="w3-padding w3-center w3-teal"><i class="fas fa-info-circle"></i> Properties</div>
+    <div class="w3-padding" style="background-color: wheat;overflow-y:auto">
+      <p title="height+margin+padding">Total Height = <span id="elemHeight"></span></p>
+      <p title="Width+margin+padding">Total Width = <span id="elemWidth"></span></p>
+      <p>Class = <span id="elemClass"></span></p>
+      <p>Id = <span id="elemId"></span></p>
+      <p>CSS = <span id="elemCss"></span></p>
+      <p>Src/Href = <span id="elemSrc"></span></p>
+      <div class="w3-button w3-teal w3-display-topright"
+        onclick="document.getElementById('propContainer').style.display = 'none';">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="editOption" class="w3-card w3-display-middle w3-mobile" style="width: 300px;background-color: wheat;">
+    <div class="w3-teal w3-center w3-padding"><i class="fas fa-edit"></i> Edit</div>
+    <div id="edit" class="w3-padding" style="overflow-x: auto;">
+
+      <div class="label w3-margin-bottom">Style</div>
+      <textarea id="elemStyle" rows="5" class="w3-input w3-margin-bottom" placeholder="CSS code"
+        style="resize: none;overflow-y: auto;"></textarea>
+
+    </div>
+
+    <div class="w3-teal w3-button w3-display-topright"
+      onclick="document.getElementById('editOption').style.display = 'none';"><i class="fas fa-times"></i></div>
+  </div>
+  </div>
+
+  <script src="myjs.js"></script>
+  <script src="jquery-3.4.1.js"></script>
+  <script src="long-press-event.min.js"></script>
+  <script src="https://kit.fontawesome.com/a24ff9630f.js" crossorigin="anonymous"></script>
+  <script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    var file_name = 'undefined';
+    var file_status = 'File saved click download button to download file!';
+
+    $(document).ready(function () {
+      $('#download').click(function () {
+        let nodes = document.querySelectorAll('#result .node');
+        for (let n = 0; n < nodes.length; n++) {
+          nodes[n].removeAttribute("draggable");
+          nodes[n].removeAttribute("ondragstart");
+          nodes[n].removeAttribute("ondrop");
+          nodes[n].removeAttribute("ondragover");
+          nodes[n].removeAttribute('data-long-press-delay');
+        }
+        $('#final1').val($('#result').html());
+        if (file_name == 'undefined') {
+          file_name = "file" + Math.floor(Math.random() * 100000) + ".htm";
+        } else {
+          file_status = 'Saved!';
+        }
+        $('#submit').one("click", function (e) {
+          e.preventDefault();
+        });
+        $.ajax({
+          url: "result.php?file=" + file_name,
+          method: "post",
+          data: $('form').serialize(),
+          dataType: "text",
+          success: function (strMessage) {
+            alert(file_status);
+            document.getElementById('downloadBtn').href = file_name;
+          }
+        })
+      });
+    });
+
+    window.addEventListener("beforeunload", function (e) {
+      deleteFile(file_name);
+
+    });
+
+    function deleteFile(file_name) {
+      $.ajax({
+        url: 'delete.php',
+        data: {
+          'file': file_name
+        },
+      });
+    }
+
+    function previewCode() {
+      let nodes = document.querySelectorAll('#result .node');
+      for (let n = 0; n < nodes.length; n++) {
+        nodes[n].removeAttribute("draggable");
+        nodes[n].removeAttribute("ondragstart");
+        nodes[n].removeAttribute("ondrop");
+        nodes[n].removeAttribute("ondragover");
+        nodes[n].removeAttribute('data-long-press-delay');
+      }
+      document.getElementById('result').removeEventListener("click", selectElement);
+    }
+
+    function editCode() {
+      let nodes = document.querySelectorAll('#result .node');
+      for (let n = 0; n < nodes.length; n++) {
+        nodes[n].setAttribute("draggable", "true");
+        nodes[n].setAttribute("ondragstart", "drag(event)");
+        nodes[n].setAttribute("ondrop", "drop(event)");
+        nodes[n].setAttribute("ondragover", "allowDrop(event)");
+        nodes[n].setAttribute('data-long-press-delay', '500');
+      }
+      document.getElementById('result').addEventListener("click", selectElement);
+    }
+  </script>
+</body>
+
+</html>

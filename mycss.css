@@ -1,0 +1,87 @@
+h1,h2,h3,h4,h5,h6,*{
+    font-family: 'Bahnschrift light';
+}
+
+input{
+    outline: none;
+}
+
+.name{
+    font-variant: normal;
+    font-size: 28px;
+}
+
+.label{
+    font-size: 18px;
+}
+
+#result{
+    position: relative;
+    width:100%;
+    overflow: auto;
+    height: 92.1vh;
+}
+
+#propContainer::-webkit-scrollbar,#result::-webkit-scrollbar,#edit::-webkit-scrollbar,#mySidebar::-webkit-scrollbar{
+    width: 5px;
+    background-color: #f5deb3;
+}
+
+#propContainer::-webkit-scrollbar-thumb,#result::-webkit-scrollbar-thumb,#edit::-webkit-scrollbar-thumb,#mySidebar::-webkit-scrollbar-thumb{
+    background-color: #009688;
+}
+
+#modify{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.close{
+    padding: 10px;
+    display: none;
+    color: red;
+}
+
+#w3class div{
+    float: left;
+    margin: 2.5px;
+}
+
+#advance{
+    overflow: hidden;
+    border-radius: 8px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 16px;
+    display: none;
+}
+
+#advance ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#advance ul li{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+#advance ul li:hover{
+    background-color: #009688;
+    color: white;
+}
+
+#addBtn{
+    display: none;
+}
+
+#propContainer,#editOption,#model{
+    display: none;
+}
